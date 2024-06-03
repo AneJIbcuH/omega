@@ -1,0 +1,301 @@
+* {
+  font-family: system-ui;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  gap: 30px;
+  background: #ececec;
+
+  div {
+    color: gray;
+  }
+
+  div:hover {
+    cursor: pointer;
+    color: #7749f8;
+  }
+}
+
+.chat {
+  margin: 10px auto;
+  width: 540px;
+  border: #b3b3b3 solid 1px;
+  min-height: 540px;
+  border-radius: 5px;
+
+  p {
+    width: 300px;
+    margin: 5px;
+    word-break: break-all;
+    border-radius: 5px;
+    background: #ebe5fc;
+    padding: 0 5px;
+  }
+
+  .user {
+    background: #9ec5fe;
+    margin-left: 225px;
+  }
+
+  @media (max-width: 480px) {
+    width: 85%;
+    min-height: 550px;
+  
+    p {
+      width: 230px;
+    }
+  
+    .user {
+      margin-left: 95px;
+    }
+  }
+}
+
+.chat-input {
+  margin: auto;
+  width: 540px;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 488px;
+    height: 30px;
+    border: #b3b3b3 solid 1px;
+    border-radius: 5px;
+    padding-left: 5px;
+  }
+
+  .btn {
+    height: 30px;
+    font-size: 40px;
+  }
+
+  .btn:hover {
+    color: #7749f8;
+  }
+
+  .btn:active {
+    color: #b9a0fd;
+  }
+
+  @media (max-width: 480px) {
+    margin: auto;
+    width: 85%;
+  
+    input {
+      width: 488px;
+      height: 30px;
+      border: #b3b3b3 solid 1px;
+      border-radius: 5px;
+      padding-left: 5px;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 540px;
+  height: 540px;
+
+  .cards-navigate-p {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .cards-navigate-p:hover {
+    color: #7749f8;
+    cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 400px;
+    height: 390px;
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  border: solid rgb(228, 228, 228) 2px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-img {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  img {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .icon {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+  }
+
+  .card-img:hover .icon {
+    display: block;
+    opacity: 1;
+  }
+
+  .card-img:hover {
+    background: #828282;
+    border-radius: 9px 9px 0 0;
+    cursor: pointer;
+  }
+
+  .card-img:hover img {
+    opacity: 0.3;
+  }
+
+  .card-h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  h5 {
+    padding-left: 10px;
+    color: #818181;
+  }
+
+  @media (max-width: 480px) {
+    width: 170px;
+    height: 170px;
+  
+    img {
+      width: 170px;
+      height: 90px;
+
+    }
+  
+    .card-h3 {
+      padding: 0 5px;
+      font-size: 10px;
+    }
+  
+    h5 {
+      padding-left: 5px;
+      font-size: 10px;
+    }
+  }
+}
+
+.addCard {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+
+  input,
+  button {
+    height: 35px;
+    border-radius: 5px;
+    border: #b3b3b3 solid 1px;
+    margin: 3px 0 15px 0;
+    padding-left: 5px;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+  }
+
+  input:hover {
+    border-color: #7749f8;
+  }
+
+  button {
+    background-color: #7749f8;
+    color: white;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #9f7dff;
+  }
+
+  button:active {
+    background-color: #c8b4ff;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  label {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 250px;
+    margin: 20px 0;
+    border: dotted 3px #b3b3b3;
+    border-radius: 10px;
+    color: #b3b3b3;
+    font-size: 20px;
+  }
+
+  label:hover {
+    cursor: pointer;
+    border-color: #7749f8;
+    color: #7749f8;
+  }
+
+  @media (max-width: 480px) {
+    width: 350px;
+  }
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  div {
+    border: solid rgb(228, 228, 228) 1px;
+    margin: 5px 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div:hover {
+    cursor: pointer;
+    background: #7749f8;
+  }
+
+  .active {
+    background: #7749f8;
+    color: white;
+  }
+}
