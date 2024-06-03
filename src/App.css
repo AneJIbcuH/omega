@@ -43,7 +43,7 @@
   }
 
   @media (max-width: 480px) {
-    width: 85%;
+    width: 350px;
     min-height: 550px;
   
     p {
@@ -51,7 +51,7 @@
     }
   
     .user {
-      margin-left: 95px;
+      margin-left: 105px;
     }
   }
 }
@@ -116,11 +116,9 @@
   }
 
   @media (max-width: 480px) {
-    display: flex;
-    flex-wrap: wrap;
     margin: auto;
-    width: 400px;
-    height: 390px;
+    width: 380px;
+    height: 380px;
   }
 }
 
