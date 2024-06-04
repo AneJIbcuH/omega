@@ -4,6 +4,7 @@ import { useActions } from "../hooks/actions";
 import { useNavigate } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import { useState, useEffect } from "react";
+import { MyFormData } from "../models/models";
 
 const Cards: React.FC = () => {
   const { cards } = useAppSelector((state) => state.cards);
@@ -23,18 +24,23 @@ const Cards: React.FC = () => {
     }
   }, [currentCards]);
 
-  // function switchPage(pageNumber: number) {
-  //   setCurrentPage(pageNumber)
-  // }
+  function my(card: MyFormData) {
+    if (window.innerWidth >= 500) {
+      deleteCard(card);
+    }
+  }
 
   return (
     <>
       <div className="cards">
         {currentCards?.map((card) => (
           <div className="card" key={card.id}>
-            <div className="card-img" onClick={() => deleteCard(card)}>
+            <div className="card-img" onClick={() => my(card)}>
               <img src={card.image} alt="none" />
-              <DeleteOutlined className="icon" />
+              <DeleteOutlined
+                className="icon"
+                onClick={() => deleteCard(card)}
+              />
             </div>
             <div className="card-h3">
               <h3>{card.name}</h3>

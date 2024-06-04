@@ -1,5 +1,3 @@
-// import { useNavigate } from "react-router-dom";
-// import { useAppSelector } from "../hooks/redux";
 import { MyFormData } from "../models/models";
 
 type PaginationProps = {
@@ -13,9 +11,6 @@ const Pagination: React.FC<PaginationProps> = ({
   setCurrentPage,
   currentPage,
 }) => {
-  //   const navigate = useNavigate();
-  // const { cards } = useAppSelector((state) => state.cards);
-
   const cardsPerPage = 4;
 
   const pageNumbers = [];
